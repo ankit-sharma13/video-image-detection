@@ -1,0 +1,8 @@
+import cv2
+camera=cv2.VideoCapture(0)
+while True:
+    s,image=camera.read()
+    #image=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)  ##To have the video in gray color
+    image=cv2.cvtColor(image,cv2.COLOR_BGR2RGBA)   ## To have the video in blue color
+    cv2.imshow("Video",image)
+    cv2.waitKey(1)
